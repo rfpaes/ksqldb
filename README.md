@@ -6,6 +6,14 @@ Para cada transferência bancária iremos calcular o saldo do cliente, dado as t
 ## Pré-Requisitos
 Você precisa subir o docker-compose através do arquivo `docker-compose.yml` presente na raiz deste repositório.
 
+## Entrar no container
+1) Excecutar o comando abaixo
+   `docker exec -it ksqldb-cli ksql http://ksqldb-server:8088`
+2) Mostrar as stream
+    `show streams;`
+3) Setar o earliest
+    `set 'auto.offset.reset' = 'earliest';`
+
 ## Passo a passo 
 1) Criar stream para ler as transferencias.
       
